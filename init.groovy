@@ -93,7 +93,7 @@ matching.each { key , directree_closure ->
     
     if (tree.walk { it.file.isFile() && it.file.exists() }.any()) {
         println "some file(s) already exist:"
-        println tree.walk { it.file.exists()? it.file : null }.flatten().join("\n")
+        println tree.walk { it.file.exists()? it.file : null }.findAll().join("\n")
         println "No files written!"
     } else {
         tree.create()
