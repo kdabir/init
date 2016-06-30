@@ -171,18 +171,19 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
+[*.{groovy, java, gradle}]
+indent_size = 4
+
 [*.md]
 trim_trailing_whitespace = false
 
-[*.js]
+[*.{js, css, html, json, yaml, coffee}]
 indent_size = 2
+indent_style = space
 
-[*.css]
-indent_size = 2
-
-[*.html]
-indent_size = 2
-
+[{Makefile, makefile}]
+indent_style = tab
+indent_size = 4
 """}
 
 def tpl_minimal_html() {"""\
